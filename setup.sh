@@ -10,7 +10,12 @@ esac
 
 echo
 
-cat Main/Base.json Main/Privacy.json $lightingfile \
+cat \
+	Main/Base.json \
+	Main/Privacy.json \
+	Experimental/Buggy/EnableExperimentalPerfMode.json \
+	Experimental/Buggy/QuickGameLaunch.json \
+	$lightingfile \
 	| sed -r "/^[{}]/d; \ # Remove bracket lines
 	s/^\s*\"?//; \ # Remove beginning whitespace and first quote of key
 	s/\"?:\s*/ = /; \ # Replace last quote of key and colon with equals sign
