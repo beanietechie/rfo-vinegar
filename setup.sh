@@ -13,8 +13,6 @@ echo
 cat \
 	Main/Base.json \
 	Main/Privacy.json \
-	Experimental/Buggy/EnableExperimentalPerfMode.json \
-	Experimental/Buggy/QuickGameLaunch.json \
 	$lightingfile \
 	| sed -r "/^[{}]/d; \ # Remove bracket lines
 	s/^\s*\"?//; \ # Remove beginning whitespace and first quote of key
